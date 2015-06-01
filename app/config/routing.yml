@@ -1,0 +1,7 @@
+hilda_library:
+    resource: "@HildaLibraryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

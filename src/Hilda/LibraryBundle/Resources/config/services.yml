@@ -1,0 +1,4 @@
+services:
+#    hilda_library.example:
+#        class: Hilda\LibraryBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

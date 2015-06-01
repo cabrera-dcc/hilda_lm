@@ -1,0 +1,5 @@
+hilda_library_homepage:
+    path:     /
+    defaults: { _controller: HildaLibraryBundle:Page:index }
+    requirements:
+        _method: GET
