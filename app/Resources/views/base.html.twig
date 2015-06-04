@@ -34,18 +34,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                    <a class="navbar-brand visible-xs-inline" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                    <a class="navbar-brand visible-xs-inline" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <strong><ul class="nav navbar-nav navbar-left">
-                        <li><a href="#">EDITORIALES</a></li>
-                        <li><a href="#">AUTORES</a></li>
-                        <li><a href="#">LIBROS</a></li>
-                        <li><a href="#">EJEMPLARES</a></li>
+                        <li><a href="{{ path('HildaLibraryBundle_editorials') }}">EDITORIALES</a></li>
+                        <li><a href="{{ path('HildaLibraryBundle_authors') }}">AUTORES</a></li>
+                        <li><a href="{{ path('HildaLibraryBundle_books') }}">LIBROS</a></li>
+                        <li><a href="{{ path('HildaLibraryBundle_copies') }}">EJEMPLARES</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <a class="navbar-brand navbar-right hidden-xs" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+                        <a class="navbar-brand navbar-right hidden-xs" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">NUEVO <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">

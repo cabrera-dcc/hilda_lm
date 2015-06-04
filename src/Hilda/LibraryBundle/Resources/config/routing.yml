@@ -1,5 +1,29 @@
-hilda_library_homepage:
+HildaLibraryBundle_homepage:
     path:     /
     defaults: { _controller: HildaLibraryBundle:Page:index }
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_editorials:
+    path:     /editorials
+    defaults: { _controller: HildaLibraryBundle:Page:editorials}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_authors:
+    path:     /authors
+    defaults: { _controller: HildaLibraryBundle:Page:authors}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_books:
+    path:     /books
+    defaults: { _controller: HildaLibraryBundle:Page:books}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_copies:
+    path:     /copies
+    defaults: { _controller: HildaLibraryBundle:Page:copies}
     requirements:
         _method: GET
