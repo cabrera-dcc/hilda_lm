@@ -27,3 +27,27 @@ HildaLibraryBundle_copies:
     defaults: { _controller: HildaLibraryBundle:Page:copies}
     requirements:
         _method: GET
+
+HildaLibraryBundle_neweditorial:
+    path:     /neweditorial
+    defaults: { _controller: HildaLibraryBundle:Page:neweditorial}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_newauthor:
+    path:     /newauthor
+    defaults: { _controller: HildaLibraryBundle:Page:newauthor}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_newbook:
+    path:     /newbook
+    defaults: { _controller: HildaLibraryBundle:Page:newbook}
+    requirements:
+        _method: GET
+
+HildaLibraryBundle_newcopy:
+    path:     /newcopy
+    defaults: { _controller: HildaLibraryBundle:Page:newcopy}
+    requirements:
+        _method: GET

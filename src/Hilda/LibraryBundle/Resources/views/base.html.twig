@@ -1,6 +1,66 @@
 {# src/Hilda/LibraryBundle/Resources/views/base.html.twig #}
 {% extends '::base.html.twig' %}
 
-{% block sidebar %}
-    Sidebar content
+
+
+{% block stylesheets %}
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block header %}
+    <div class="container text-center">
+        <h1>HILDA</h1>
+        <p><em>An open source library manager</em></p>
+    </div>
+{% endblock %}
+
+{% block nav %}
+	<div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	        <a class="navbar-brand visible-xs-inline" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+	    </div>
+
+    	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+        	<strong><ul class="nav navbar-nav navbar-left">
+            	<li><a href="{{ path('HildaLibraryBundle_editorials') }}">EDITORIALES</a></li>
+            	<li><a href="{{ path('HildaLibraryBundle_authors') }}">AUTORES</a></li>
+            	<li><a href="{{ path('HildaLibraryBundle_books') }}">LIBROS</a></li>
+            	<li><a href="{{ path('HildaLibraryBundle_copies') }}">EJEMPLARES</a></li>
+        	</ul>
+        	<ul class="nav navbar-nav navbar-right">
+            	<a class="navbar-brand navbar-right hidden-xs" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+            	<li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">NUEVO <span class="caret"></span></a>
+                	<ul class="dropdown-menu" role="menu">
+                    	<li><a href="{{ path('HildaLibraryBundle_neweditorial') }}"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Editorial</a></li>
+                    	<li><a href="{{ path('HildaLibraryBundle_newauthor') }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Autor</a></li>
+                    	<li><a href="{{ path('HildaLibraryBundle_newbook') }}"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Libro</a></li>
+                    	<li><a href="{{ path('HildaLibraryBundle_newcopy') }}"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Ejemplar</a></li>
+                    	<li class="divider"></li>
+                	</ul>
+            	</li>
+        	</ul></strong>
+    	</div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+	<div class="container-fluid small">
+        <div class="row">
+            <p class="navbar-text"><abbr title="Gestor de Bibliotecas de código abierto" class="initialism"><strong>Hilda</abbr> &#169; 2015 - <i>An open source library manager with Symfony2 by <a target="_blank" rel="author" hreflang="es" type="text/html" href="http://cabrera-dcc.github.io">Daniel Cabrera Cebrero</a></i></strong></p>
+            <i><p class="navbar-text small">Software licensed under a GNU General Public License (<a rel="license" target="blank" hreflang="en" type="text/html" href="https://github.com/cabrera-dcc/hilda_lm/blob/master/LICENSE">GPLv3</a>)</p>
+            <p class="navbar-text small">Design and styles licensed under a <a rel="license" target="_blank" hreflang="en" type="text/html" href="http://opensource.org/licenses/MIT">MIT License</a></p></i>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 {% endblock %}

@@ -31,4 +31,24 @@ class PageController extends Controller
     {
     	return $this->render('HildaLibraryBundle:Page:copies.html.twig');
     }
+
+    public function neweditorialAction()
+    {
+        return $this->render('HildaLibraryBundle:Page:neweditorial.html.twig');
+    }
+
+    public function newauthorAction()
+    {
+        return $this->render('HildaLibraryBundle:Page:newauthor.html.twig');
+    }
+
+    public function newbookAction()
+    {
+        return $this->render('HildaLibraryBundle:Page:newbook.html.twig');
+    }
+
+    public function newcopyAction()
+    {
+        return $this->render('HildaLibraryBundle:Page:newcopy.html.twig');
+    }
 }

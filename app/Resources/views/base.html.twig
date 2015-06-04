@@ -6,81 +6,32 @@
         <meta name="application-name" content="Hilda"/>
         <meta name="description" content="Gestor de Bibliotecas de código abierto"/>
         <meta name="author" content="Daniel Cabrera Cebrero (http://cabrera-dcc.github.io)"/>
-        <meta name="version" content="Beta-1 (rev. 20150602)"/>
+        <meta name="version" content="Beta-1 (rev. 20150604)"/>
         <meta name="keywords" content="opensource,library,manager"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        {% block stylesheets %}
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
-            <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
-        {% endblock %}
+        {% block stylesheets %}{% endblock %}
+        <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <header>
-            <div class="jumbotron">
-                    <div class="container text-center">
-                        <h1>HILDA</h1>
-                        <p><em>An open source library manager</em></p>
-                    </div>
-                </div>
+        <header class="jumbotron">
+            {% block header %}{% endblock %}
         </header>
 
         <nav class="navbar navbar-default navbar-inverse text-uppercase" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                    <a class="navbar-brand visible-xs-inline" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <strong><ul class="nav navbar-nav navbar-left">
-                        <li><a href="{{ path('HildaLibraryBundle_editorials') }}">EDITORIALES</a></li>
-                        <li><a href="{{ path('HildaLibraryBundle_authors') }}">AUTORES</a></li>
-                        <li><a href="{{ path('HildaLibraryBundle_books') }}">LIBROS</a></li>
-                        <li><a href="{{ path('HildaLibraryBundle_copies') }}">EJEMPLARES</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <a class="navbar-brand navbar-right hidden-xs" href="{{ path('HildaLibraryBundle_homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">NUEVO <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Editorial</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Autor</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Libro</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> Ejemplar</a></li>
-                                <li class="divider"></li>
-                            </ul>
-                        </li>
-                    </ul></strong>
-                </div>
+            {% block nav %}{% endblock %}
         </nav>
 
         <main>
-            <section>
+            <section class="container-fluid">
                 {% block body %}{% endblock %}
             </section>
         </main>
 
         <footer class="navbar navbar-default navbar-static-bottom">
-            {% block footer %}
-                <div class="container-fluid small">
-                    <div class="row">
-                        <p class="navbar-text"><abbr title="Gestor de Bibliotecas de código abierto" class="initialism"><strong>Hilda</abbr> &#169; 2015 - <i>An open source library manager with Symfony2 by <a target="_blank" rel="author" hreflang="es" type="text/html" href="http://cabrera-dcc.github.io">Daniel Cabrera Cebrero</a></i></strong></p>
-                        <i><p class="navbar-text small">Software licensed under a GNU General Public License (<a rel="license" target="blank" hreflang="en" type="text/html" href="https://github.com/cabrera-dcc/hilda_lm/blob/master/LICENSE">GPLv3</a>)</p>
-                        <p class="navbar-text small">Design and styles licensed under a <a rel="license" target="_blank" hreflang="en" type="text/html" href="http://opensource.org/licenses/MIT">MIT License</a></p></i>
-                    </div>
-                </div>
-            {% endblock %}
+            {% block footer %}{% endblock %}
         </footer>
 
-        {% block javascripts %}
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
