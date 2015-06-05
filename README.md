@@ -56,23 +56,25 @@ It comes pre-configured with the following bundles:
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
 
-What to do after downloading?
+
+What's not included?
 --------------
 
 Some files have been ignored into gitignore file. 
 
-  * **app/bootstrap.php.cache** - Symfony2 generated files to improve performance.
+  * **app/bootstrap.php.cache** - Symfony2 files to improve performance.
 
   * **app/config/parameters.yml** - Symfony2 configuration files. They may contain passwords and other sensitive data. So the files are not uploaded to the repository.
 
   * **app/cache/*** - Directory where all temporary files that improve performance of the application are generated.
 
-  * app/logs/* - Directory where log files are generated in Symfony2. It contains all debug messages.
+  * **app/logs/*** - Directory where log files are generated in Symfony2. It contains all debug messages.
 
-  * vendors/* - Directory with all Symfony2 components and libraries. These dependencies are never uploaded to the repository. Every user who downloads this application must install the vendors with the command: php bin/vendors install
-  * web/bundles/* - Directory (along with css and js files) where public web files are dumped.
+  * **vendors/*** - Directory with all Symfony2 components and libraries. These dependencies are never uploaded to the repository. Every user who downloads this application must install the vendors with the command: php bin/vendors install.
 
-  * web/uploads/* - Directory where files uploaded by users are stored.
+  * **web/bundles/*** - Directory (along with css and js files) where public web files are dumped.
+
+  * **web/uploads/*** - Directory where files uploaded by users are stored.
 
 Enjoy!
 
