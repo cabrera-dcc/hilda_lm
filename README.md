@@ -1,5 +1,10 @@
+hilda_lm
+========
+
+Open source library manager with Symfony2 [unfinished project]
+
 Symfony Standard Edition
-========================
+------------------------
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
@@ -75,8 +80,6 @@ Some files have been ignored into gitignore file.
   * **web/bundles/*** - Directory (along with css and js files) where public web files are dumped.
 
   * **web/uploads/*** - Directory where files uploaded by users are stored.
-
-Enjoy!
 
 [1]:  http://symfony.com/doc/2.7/book/installation.html
 [6]:  http://symfony.com/doc/2.7/bundles/SensioFrameworkExtraBundle/index.html
